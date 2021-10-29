@@ -26,6 +26,3 @@ import { HeaderComponent } from './componentes/header/header.component'
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-export class YoutubePlayerExampleModule {
-}
-let apiLoaded = false;
