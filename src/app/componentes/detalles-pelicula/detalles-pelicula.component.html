@@ -1,0 +1,108 @@
+<div>
+    <div class="bgimg border"
+        [ngStyle]="{'background-image': 'url(//image.tmdb.org/t/p/w500/'+pelicula.backdrop_path+')'}">
+        <section class="container-fluid">
+            <div class="container detalles">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="//image.tmdb.org/t/p/w500/{{pelicula.poster_path}}" alt="poster" class="poster">
+
+                    </div>
+                    <div class="col-8">
+                        <section id="detallesDatos">
+                            <div class="titulo">
+                                <h2>
+                                    <b>{{pelicula.title}}</b>
+                                    <span> {{pelicula.release_date}} </span>
+                                </h2>
+                                <div class="row">
+                                    <span class="col" id="clasificacion">clasificacion</span>
+                                    <span class="col" id="release">{{pelicula.release_date}}</span>
+                                    <div *ngFor="let item of generos">
+                                        <span class="col" id="generos">{{item.name}}</span>
+                                    </div>
+                                    <span class="col" id="duracion">{{pelicula.runtime}} min</span>
+                                </div>
+
+                            </div>
+
+                            <ul class="row acciones">
+                                <div class="">
+                                    <div class="progress" attr.data-percentage="{{pelicula.vote_average*10}}">
+                                        <span class="progress-left">
+                                            <span class="progress-bar"></span>
+                                        </span>
+                                        <span class="progress-right">
+                                            <span class="progress-bar"></span>
+                                        </span>
+                                        <div class="progress-value">
+                                            <div>
+                                                {{pelicula.vote_average*10}}%<br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="boton">
+                                    <button class="btn btn-outline-light" (click)='agregarFavorito()' disabled>Agregar a
+                                        Favoritos</button>
+                                </div>
+                                <div class="boton">
+                                    <button class="btn btn-outline-light" (click)="reproducirTrailer()"  disabled>Reproducir
+                                        Trailer</button>
+                                </div>
+                            </ul>
+                            <div>
+                                <h3>Sipnosis</h3>
+                                <div class="sipnosis">
+                                    <span>{{pelicula.overview}}</span>
+                                </div>
+                                <div class="personal">
+                                    <div *ngFor="let item of crew">
+                                        <div *ngIf="item.job==='Director'">
+                                            <b>Director: </b>
+                                            <span>{{item.name}}</span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div>
+                                        <b>Estatus: </b>
+                                        <span>{{pelicula.status}}</span>
+                                    </div>
+                                    <div>
+                                        <b>Lenguaje Original: </b>
+                                        <span>{{pelicula.original_language}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <h4 class="reparto">Reparto</h4>
+        <div class="PM_Scroller">
+
+            <div *ngFor="let item of reparto; let i = index" class="PM_Scroller_Item Card">
+
+                <div *ngIf="item.profile_path; else elseBlock">
+                    <img src="//image.tmdb.org/t/p/w500/{{item.profile_path}}" alt="">
+                </div>
+                <ng-template #elseBlock>
+                    <img src="/assets/usuario.PNG" alt="">
+                </ng-template>
+                <p><b>{{item.name}}</b></p>
+                <p>{{item.character}}</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
