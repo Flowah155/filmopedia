@@ -24,4 +24,3 @@ export interface PM_Results_Entity {
   origin_country?: (string)[] | null;
   original_name?: string | null;
 }
-

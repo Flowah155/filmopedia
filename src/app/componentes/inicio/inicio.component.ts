@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PopularMoviesObject } from '../interfaces'
-import { PM_Results_Entity } from '../interfaces'
-import { PopularMoviesService } from '../popular-movies.service'
+import { PopularMoviesObject } from 'src/app/popular-movies-interface'
+import { PM_Results_Entity } from 'src/app/popular-movies-interface'
+import { PopularMoviesService } from 'src/app/popular-movies.service'
 
 @Component({
   selector: 'app-inicio',
