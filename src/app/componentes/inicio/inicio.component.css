@@ -82,6 +82,18 @@
     color: #000000;
   }
 
+  .PopularMovies a {
+    text-decoration: none;
+  }
+
+  .PopularMovies a h2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000000;
+  }
+
 .RecentTrailers {
   flex: 1;
   background-color: #220A72;
@@ -104,16 +116,17 @@
 }
 
   .PM_Scroller .PM_Scroller_Item {
-      padding: 0px 11px 0px 11px;
+    padding: 0px 11px 0px 11px;
+    
   }
 
-    .PM_Scroller .PM_Scroller_Item img {
+    .PM_Scroller .PM_Scroller_Item a img {
       height: 240px;
       width: auto;
       border-radius: 16px;
     }
 
-    .PM_Scroller .PM_Scroller_Item h2 {
+    .PM_Scroller .PM_Scroller_Item a h2 {
       font-family: 'Roboto', sans-serif;
       font-style: normal;
       font-weight: bold;
@@ -129,3 +142,19 @@
       line-height: 21px;
       color: #545454;
     }
+
+.RT_Scroller {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+
+  .RT_Scroller .RT_Scroller_Item {
+    padding: 27px 14px 27px 14px;
+  }
+
+  .RT_Scroller .RT_Scroller_Item iframe{
+    border-radius: 16px;
+  }

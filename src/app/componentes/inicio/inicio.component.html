@@ -8,7 +8,8 @@
       <h1>Bienvenido</h1>
       <h2>Millones de películas para descubrir. Explorar ahora</h2>
       <div style="padding: 47px 0px 47px 0px">
-        <form class="SearchForm">
+        <!--  AQUÍ SE AGREGA EL LINKEO A CUANDO SE REALICE UNA BÚSQUEDA  -->
+        <form class="SearchForm" method="post" action="#">
           <input class="SearchInput form-control form-control-lg" type="text" placeholder="Busca una película...">
           <button class="SearchButton" type="submit">Buscar</button>
         </form>
@@ -22,13 +23,13 @@
 
       <div class="PM_Scroller">
 
-        <div *ngFor="let item of dataR; let i = index" class="PM_Scroller_Item Card">
+        <div *ngFor="let item of PMdataR" class="PM_Scroller_Item Card">
+          <!--  AQUÍ SE AGREGA EL LINKEO A CUANDO SE CLICKEE CADA IMAGEN  -->
+          <a href="">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="Card">
 
-          <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="Card">
-
-
-          <h2 class="card-title">{{item.original_title}}</h2>
-
+            <h2 class="card-title">{{item.title}}</h2>
+          </a>
 
           <p class="card-text">{{item.release_date}}</p>
 
@@ -42,6 +43,17 @@
   <div class="RecentTrailers">
     <div style="padding: 48px 80px 48px 80px">
       <h1>Últimos trailers</h1>
+
+      <div class="RT_Scroller">
+        <div *ngFor="let item of RTmovieKeyList; index as i" class="RT_Scroller_Item Card">
+          <div *ngIf="RTmovieKeyList[i]">
+            <iframe width="460" height="240" [src]="item" allowfullscreen></iframe>
+          </div>
+          
+        </div>
+
+      </div>
+
     </div>
   </div>
 </div>
