@@ -1,0 +1,131 @@
+
+.InicioBody {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.WelcomeSearch {
+  background-image: url("/assets/WelcomeBackground.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(34, 10, 114, 0.75);
+  flex: 1;
+}
+
+  .WelcomeSearch h1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 56px;
+    color: #FFFFFF;
+  }
+
+  .WelcomeSearch h2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    color: #FFFFFF;
+    padding-top: 8px;
+  }
+
+.SearchForm {
+  position: relative;
+}
+
+  .SearchForm input {
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    background: #FFFFFF;
+    border-radius: 30px;
+    height: 56px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #787878;
+  }
+
+  .SearchForm button {
+    border: 0;
+    outline: none;
+    margin: 0;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    line-height: 1;
+    z-index: 4;
+    width: 218px;
+
+    background: #FEC73A;
+    border-radius: 30px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    color: #181818;
+  }
+
+.PopularMovies {
+  flex: 1;
+}
+
+  .PopularMovies h1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    color: #000000;
+  }
+
+.RecentTrailers {
+  flex: 1;
+  background-color: #220A72;
+}
+
+  .RecentTrailers h1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    color: #FFFFFF;
+  }
+
+.PM_Scroller {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+
+  .PM_Scroller .PM_Scroller_Item {
+      padding: 0px 11px 0px 11px;
+  }
+
+    .PM_Scroller .PM_Scroller_Item img {
+      height: 240px;
+      width: auto;
+      border-radius: 16px;
+    }
+
+    .PM_Scroller .PM_Scroller_Item h2 {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      color: #050505;
+    }
+
+    .PM_Scroller .PM_Scroller_Item p {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+      color: #545454;
+    }
