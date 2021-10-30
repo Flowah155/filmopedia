@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { PeliculaDetailsServiceService } from 'src/app/servicios/pelicula-details-service.service';
@@ -9,6 +8,8 @@ import { GenresEntity } from 'src/app/interfaces/pelicula-detalles-interface';
 import { PeliculaCreditsInterface } from 'src/app/interfaces/pelicula-credits-interface';
 import { CastEntity } from 'src/app/interfaces/pelicula-credits-interface';
 import { CrewEntity } from 'src/app/interfaces/pelicula-credits-interface';
+
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'ngbd-modal-content',
@@ -49,11 +50,16 @@ export class NgbdModalContent {
 })
 export class DetallesPeliculaComponent implements OnInit {
 
+  movieId : number;
+  
   constructor(private modalService: NgbModal,
-    private rutaActiva: ActivatedRoute,
+    private route: ActivatedRoute,
     private peliculaDetalles: PeliculaDetailsServiceService,
     private peliculaCredits: PeliculaCreditsServiceService) { 
     //Agregar datos a getDetail()
+    this.route.queryParams.subscribe(params => {
+      this.movieId = params.movieId;
+    });
     this.peliculaDetalles.getDetail(this.movieId).subscribe(
       data=>{
         console.warn(<PeliculaDetallesInterface> data)
@@ -80,7 +86,7 @@ export class DetallesPeliculaComponent implements OnInit {
 
   readonly = true;
 
-  movieId!: number;
+  
 
   pelicula: PeliculaDetallesInterface = <PeliculaDetallesInterface>{};
   generos: GenresEntity[] = <GenresEntity[]>{};
@@ -91,13 +97,7 @@ export class DetallesPeliculaComponent implements OnInit {
   //director = this.crew.filter(d=>d.job==='Director');
 
   ngOnInit(): void {
-    this.movieId=this.rutaActiva.snapshot.params.movieId;
-
-    this.rutaActiva.params.subscribe(
-      (params: Params)=>{
-        this.movieId = params.movieId;
-      }
-    );
+    
   }
 
   agregarFavorito() {

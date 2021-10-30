@@ -4,14 +4,14 @@
     color : white;
 }
 
-.bgimg{
-    box-shadow: inset 0 0 0 1000px rgba(34, 10, 114, 0.75);
-    flex: 1;
-    background-size: cover;
+.bgimg {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.57);
+  flex: 1;
+  background-size: cover;
 }
 
 .acciones{
-    position: rative;
+    position: relative;
     margin-top: 10px
 }
 

@@ -60,14 +60,14 @@ export class InicioComponent implements OnInit {
             data=>{
               this.RTauxMovieVids = <RecentTrailersOfMovie> data;
               this.RTmovieVids = <Trailers[]> this.RTauxMovieVids.results;
-              
+              console.warn(this.RTauxMovieVids)
               this.RTmovieKeyList[i]= <string> this.sanitizer.bypassSecurityTrustResourceUrl("http://www.youtube.com/embed/"+this.RTmovieVids[0].key)
             }
           )
         }
       }
     )
-    console.warn(this.RTmovieKeyList)
+    
 
   }
 
