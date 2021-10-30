@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { BusquedaService } from './servicios/busqueda/busqueda.service';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +18,8 @@ import { HeaderComponent } from './componentes/header/header.component'
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { DetallesPeliculaComponent } from './componentes/detalles-pelicula/detalles-pelicula.component';
 import { BusquedaComponent } from './componentes/busqueda/busqueda.component';
+import { ProximosestrenosComponent } from './componentes/proximos-estrenos/proximosestrenos.component';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +28,7 @@ import { BusquedaComponent } from './componentes/busqueda/busqueda.component';
     HeaderComponent,
     FooterComponent,
     BusquedaComponent,
+    ProximosestrenosComponent,
     InicioComponent
   ],
   imports: [
