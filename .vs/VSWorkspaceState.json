@@ -3,9 +3,12 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\inicio",
+    "\\src\\app\\componentes",
+    "\\src\\app\\componentes\\detalles-pelicula",
+    "\\src\\app\\componentes\\inicio",
+    "\\src\\app\\interfaces",
     "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\inicio\\inicio.component.css",
+  "SelectedNode": "\\src\\app\\componentes\\detalles-pelicula\\detalles-pelicula.component.ts",
   "PreviewInSolutionExplorer": false
 }
