@@ -1,0 +1,104 @@
+.content {
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-buscar {
+    background-color: #FEC73A;
+    border-radius: 20px;
+    border: none;
+    color: #181818;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    width: 15%;
+    height: 35px;
+    font-size: 15px;
+    margin-left: 1%;
+}
+
+.btn-buscar:hover {
+    background-color: #f3b10a;
+}
+
+.input-buscar {
+    border-radius: 18px;
+    width: 84%;
+    height: 35px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+}
+
+.count {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    margin-bottom: 20px;
+    box-shadow: 2px 5px 5px 5px #88888873;
+    border-radius: 5px;
+}
+
+.pelicula-poster {
+    height: auto;
+    width: 100px;
+    margin-right: 30px; 
+}
+
+.pelicula-poster img {
+    max-width: 100px;
+    max-height: auto;
+    display: block;
+}
+
+.pelicula-info {
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+h1 {
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.pelicula-fecha-lanzamiento {
+    font-size: 12px;
+    color: #4e4e4e;
+}
+
+.pelicula-sinopsis {
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.pagination {
+    display: inline-block;
+    justify-content: center;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
