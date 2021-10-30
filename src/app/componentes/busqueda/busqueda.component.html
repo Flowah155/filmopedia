@@ -1,0 +1,37 @@
+<div class = "content">
+    <form (ngSubmit) = "sendQuery()" #myform="ngForm">
+        <input type = "text"
+          #q = "ngModel"
+          [(ngModel)] = "modelBusqueda.q"
+          placeholder = "Busca una película..."
+          name = "q"
+          minlength = "2"
+          class = "form-control input-buscar"
+          required
+          [ngClass] = "{'is-valid': !q.invalid, 'is-invalid': q.invalid}"
+        />
+
+        <button type="submit"
+          [disabled]="!myform.valid"
+          class="btn-buscar">Buscar
+        </button>
+    </form>
+
+    <div *ngIf="resultadoBusqueda; else elseBlock">
+        <p class = "count"> Resultados: {{resultadoBusqueda.total_results}} </p>
+        <ul>
+            <li class = "rounded" *ngFor="let item of resultadoBusqueda.results; index as i;">
+                <div class = "pelicula-poster ">
+                    <img class = "rounded-left img-fluid" src = "https://image.tmdb.org/t/p/w500/{{item.poster_path}}"/> 
+                </div>
+                <div class = "pelicula-info">
+                    <h1> {{item.title}} </h1>
+                    <p class = "pelicula-fecha-lanzamiento"> Fecha de lanzamiento: {{item.release_date}} </p>
+                    <p class = "pelicula-sinopsis"> {{item.overview}} </p> 
+                </div>
+            </li>
+        </ul>   
+    </div>
+</div>
+
+<ng-template #elseBlock></ng-template>
