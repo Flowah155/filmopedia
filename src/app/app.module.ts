@@ -1,16 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { HeaderComponent } from './componentes/header/header.component';
+import { ProximosestrenosComponent } from './componentes/proximos-estrenos/proximosestrenos.component';
+import { FooterComponent } from './componentes/footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    ProximosestrenosComponent,
+    FooterComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    NgbModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

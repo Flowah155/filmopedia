@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { ProximosestrenosComponent } from './componentes/proximos-estrenos/proximosestrenos.component';
+
+const routes: Routes = [
+  { path: 'proximos-estrenos', component: ProximosestrenosComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

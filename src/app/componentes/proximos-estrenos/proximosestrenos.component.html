@@ -1,0 +1,55 @@
+
+  <br>
+  <div align="center"> 
+    <h1>Próximos estrenos</h1>
+  </div>
+  
+  
+  <form >
+  <div class="row">
+    <div class="col-1"></div>
+      <div class="col-2" style="font-family: Roboto; font-style: normal; font-weight: bold; font-size: 26px; line-height: 28px; color: #000000;">
+        Ordenar resultados por: 
+      </div>
+      <div class="col-6">
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="query" style="width: 950px; height: 56px; left: 361px; top: 234px;
+            background: #FFFFFF; border: 1px solid #7B7B7B; box-sizing: border-box; border-radius: 8px; font-size: 26px;"  >
+          <option value="Fecha de estreno Ascendente" selected>Seleccione una opción</option>
+          <option value="Fecha de estreno Ascendente">Fecha de estreno Ascendente</option>
+          <option value="Fecha de estreno Descendente">Fecha de estreno Descendente</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <button type="submit" 
+          style="width: 218px; height: 56px; left: 1142px; top: 234px; background: #FEC73A; border-radius: 30px; font-family: Roboto;
+          font-style: normal; font-weight: bold; font-size: 24px; line-height: 28px; color: #181818;">Buscar
+          </button>
+      </div>
+  </div>
+  </form>
+  <br>
+
+
+<div class="PopularMovies">
+  <div style="padding: 48px 80px 48px 80px">
+    
+
+    <div class="PM_Scroller">
+
+      <div *ngFor="let item of dataR" class="PM_Scroller_Item Card">
+        <!--  AQUÍ SE AGREGA EL LINKEO A CUANDO SE CLICKEE CADA IMAGEN  -->
+        <a href="/detalles?movieId={{item.id}}">
+          <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="Card">
+
+          <h2 class="card-title">{{item.title}}</h2>
+        </a>
+
+        <p class="card-text">{{item.release_date}}</p>
+        
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
