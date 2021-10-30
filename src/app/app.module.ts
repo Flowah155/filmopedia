@@ -1,25 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-
-import { BusquedaService } from './servicios/busqueda/busqueda.service';
-
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { FooterComponent } from './componentes/footer/footer.component'
-import { HeaderComponent } from './componentes/header/header.component'
-import { InicioComponent } from './componentes/inicio/inicio.component';
-import { DetallesPeliculaComponent } from './componentes/detalles-pelicula/detalles-pelicula.component';
-import { BusquedaComponent } from './componentes/busqueda/busqueda.component';
-import { ProximosestrenosComponent } from './componentes/proximos-estrenos/proximosestrenos.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { RegistroComponent } from './componentes/registro/registro.component';
 
+import { BusquedaService } from 'src/app/servicios/busqueda/busqueda.service';
+import { FooterComponent } from 'src/app/componentes/footer/footer.component';
+import { HeaderComponent } from 'src/app/componentes/header/header.component';
+import { InicioComponent } from 'src/app/componentes/inicio/inicio.component';
+import { DetallesPeliculaComponent } from 'src/app/componentes/detalles-pelicula/detalles-pelicula.component';
+import { BusquedaComponent } from 'src/app/componentes/busqueda/busqueda.component';
+import { ProximosestrenosComponent } from './componentes/proximos-estrenos/proximosestrenos.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +25,13 @@ import { ProximosestrenosComponent } from './componentes/proximos-estrenos/proxi
     FooterComponent,
     BusquedaComponent,
     ProximosestrenosComponent,
-    InicioComponent
+    InicioComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     NgbModule,
     FormsModule,
     HttpClientModule
