@@ -1,0 +1,9 @@
+app-footer {
+    margin-top: auto;
+}
+
+div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
