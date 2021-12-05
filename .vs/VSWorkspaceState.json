@@ -4,11 +4,8 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\componentes",
-    "\\src\\app\\componentes\\detalles-pelicula",
     "\\src\\app\\componentes\\inicio",
-    "\\src\\app\\interfaces",
-    "\\src\\assets"
+    "\\src\\app\\componentes\\proximos-estrenos"
   ],
-  "SelectedNode": "\\src\\app\\componentes\\detalles-pelicula\\detalles-pelicula.component.ts",
   "PreviewInSolutionExplorer": false
 }

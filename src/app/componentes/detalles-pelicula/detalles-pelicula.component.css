@@ -4,6 +4,8 @@
     color : white;
 }
 
+
+
 .bgimg {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.57);
   flex: 1;
@@ -11,8 +13,7 @@
 }
 
 .acciones{
-    position: relative;
-    margin-top: 10px
+    float: right;
 }
 
 .boton{
@@ -30,13 +31,17 @@
     
 }
 
+.MVotos {
+    padding-top: 20px;
+}
+
 .personal{
-    position: absolute;
-    top: 330px;
+  top: 200px;
 }
 
 .container-fluid{
     margin-top: 20px;
+
 }
 
 .flexbox{
