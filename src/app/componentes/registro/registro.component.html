@@ -1,6 +1,7 @@
 <div class="container">
 <h1>Registrese para obtener una cuenta</h1>
 <p>Registrase para obtener una cuenta es fácil y gratis. Llena el formulario para comenzar.</p>
+
 <form [formGroup]="registroForm" (ngSubmit)="enviar(registroForm.value)">
 
     Nombre del usuario <br>
@@ -13,8 +14,6 @@
     Contraseña<br>
     <input [class.is-invalid]="password.invalid && password.touched" type="password" class="form-control" formControlName="password"><br>
 
-    Confirmación de contraseña<br>
-    <input [class.is-invalid]="passwordConfirm.invalid && passwordConfirm.touched" type="password" class="form-control" formControlName="passwordConfirm"><br>
    
     <button [disabled]="registroForm.invalid" class="buttonxd" type="submit" style="display: block; margin: 0 auto;">Registrarse</button>
 
