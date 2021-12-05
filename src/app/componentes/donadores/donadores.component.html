@@ -1,0 +1,86 @@
+
+  <br>
+  <div align="center"> 
+    <h1>Donadores</h1>
+  </div>
+  <br>
+  
+  <div class="row">
+    <div class="col-2">
+      
+     </div>
+      <div class="col-8 agradecimiento">
+        Los desarrolladores de Filomepdia le damos una mención de agradecimiento a todos los donadores que apoyan la aplicación y que ayudan a su desarrollo
+      </div>
+      <div class="col-2">
+      
+     </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-2">
+      
+     </div>
+      <div class="col-1 cabecera">
+        Num donación: 
+      </div>
+      <div class="col-1 cabecera">
+        Nombre: 
+      </div>
+      <div class="col-1 cabecera" >
+        Usuario: 
+      </div>
+      <div class="col-1 cabecera" >
+        Donación: 
+      </div>
+      <div class="col-1 cabecera">
+        Nivel de donación:
+      </div>
+      <div class="col-2 cabecera" >
+        País:
+      </div>
+      <div class="col-1 cabecera" >
+        Fecha
+      </div>
+      <div class="col-2">
+      
+     </div>
+  </div>
+
+
+
+
+      <div *ngFor="let item of dataF">
+        <div class="row" style="margin-bottom: 20px;">
+          <div class="col-2">
+            
+          </div>
+          <div class="col-1 donadores">
+            {{item.iddonadores}}
+          </div>
+          <div class="col-1 donadores" >
+            {{item.nombre}}
+          </div>
+          <div class="col-1 donadores" style="font-size: 25px;">
+            {{item.usuario}}
+          </div>
+          <div class="col-1 donadores">
+            {{item.donacion}}
+          </div>
+          <div class="col-1 donadores">
+            {{item.niveldonador}}
+          </div>
+          <div class="col-2 donadores">
+            {{item.pais}}
+          </div>
+          <div class="col-1 donadores" style="font-size: 24px;">
+            {{item.fecha}}
+          </div>
+          <div class="col-1">
+            
+          </div>
+
+      </div>
+
+
+

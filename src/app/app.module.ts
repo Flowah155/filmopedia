@@ -16,6 +16,7 @@ import { InicioComponent } from 'src/app/componentes/inicio/inicio.component';
 import { DetallesPeliculaComponent } from 'src/app/componentes/detalles-pelicula/detalles-pelicula.component';
 import { BusquedaComponent } from 'src/app/componentes/busqueda/busqueda.component';
 import { ProximosestrenosComponent } from './componentes/proximos-estrenos/proximosestrenos.component';
+import { DonadoresComponent } from './componentes/donadores/donadores.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProximosestrenosComponent } from './componentes/proximos-estrenos/proxi
     BusquedaComponent,
     ProximosestrenosComponent,
     InicioComponent,
-    RegistroComponent
+    RegistroComponent,
+    DonadoresComponent
   ],
   imports: [
     BrowserModule,
