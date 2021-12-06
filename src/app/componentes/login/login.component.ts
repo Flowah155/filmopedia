@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginServiceService } from 'src/app/servicios/login-service.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
-import { first } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-login',
@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
   submitted = false;
-
+  usuario:any 
 
 
   constructor(public userService: LoginServiceService,
@@ -37,12 +37,8 @@ export class LoginComponent implements OnInit {
   }
 
   login(contacto:any){
-    this.userService.userlogin(this.loginForm.value).subscribe(respuesta=>{
-      console.log(respuesta);
-    })
-    
-    //this.router.navigateByUrl('')
-
+    this.userService.userlogin(this.loginForm.value).subscribe()
+    this.router.navigateByUrl('')
   }
-
+  
 }

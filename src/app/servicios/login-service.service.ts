@@ -8,21 +8,20 @@ import { Observable } from 'rxjs';
 })
 export class LoginServiceService {
 
-  api: string = "http://localhost/filmopedia/index.php/"
+  api: string = "http://localhost/filmopedia/"
 
   @Output() getLoggedInName: EventEmitter<any> = new EventEmitter();
-
+  
   constructor(private httpClient: HttpClient) { }
 
   public userlogin(login: any): Observable<any> {
-    return this.httpClient.post<any>(this.api + '?login=1', login)
+    return this.httpClient.post<any>(this.api+'?login=1', login)
       .pipe(map(Users => {
-        this.setToken(Users[0].name);
+        this.setToken(Users[0].User_ID);
         this.getLoggedInName.emit(true);
         return Users;
       }));
   }
-
 
   //token
   setToken(token: string) {

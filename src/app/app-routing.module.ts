@@ -6,7 +6,6 @@ import { DetallesPeliculaComponent } from './componentes/detalles-pelicula/detal
 import { BusquedaComponent } from './componentes/busqueda/busqueda.component';
 import { ProximosestrenosComponent } from './componentes/proximos-estrenos/proximosestrenos.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
-import { UsuarioDetallesComponent } from './componentes/usuario-detalles/usuario-detalles.component';
 import { LoginComponent } from './componentes/login/login.component';
 
 const routes: Routes = [
@@ -15,7 +14,6 @@ const routes: Routes = [
   { path: 'busqueda', component: BusquedaComponent},
   { path: 'proximos-estrenos', component: ProximosestrenosComponent },
   {path: 'registro', component:RegistroComponent },
-  {path: 'usuario-detalles', component:UsuarioDetallesComponent},
   {path: 'login', component:LoginComponent}
 ];
 

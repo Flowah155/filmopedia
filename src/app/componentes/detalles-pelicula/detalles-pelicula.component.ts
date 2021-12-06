@@ -11,39 +11,7 @@ import { CrewEntity } from 'src/app/interfaces/pelicula-credits-interface';
 import { ListaFavoritaService } from 'src/app/servicios/lista-favorita-service.service';
 
 import { ActivatedRoute } from '@angular/router';
-import { Subscriber } from 'rxjs';
-import { LoginServiceService } from 'src/app/servicios/login-service.service';
 
-@Component({
-  selector: 'ngbd-modal-content',
-  template: `
-    <div class="modal-header">
-      <h4 class="modal-title">Trailer</h4>
-      <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <iframe width="560" height="315" src="{{videoUrl}}"  title="YouTube video player" 
-        frameborder="0"  allowfullscreen>
-      </iframe>
-      
-      <a>{{videoUrl}}</a>
-      <p>holi</p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
-    </div>
-  `
-})
-export class NgbdModalContent {
-  @Input() videoUrl;
-
-  constructor(public activeModal: NgbActiveModal) {
-    this.videoUrl = '';
-  }
-
-}
 
 @Component({
   selector: 'app-detalles-pelicula',
@@ -105,8 +73,7 @@ export class DetallesPeliculaComponent implements OnInit {
   }
 
   reproducirTrailer() {
-    //const modalRef = this.modalService.open(NgbdModalContent);
-    //modalRef.componentInstance.videoUrl = this.videoUrl;
+
   }
   
 

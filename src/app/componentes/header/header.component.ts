@@ -15,12 +15,10 @@ export class HeaderComponent implements OnInit {
     if (this.dataService.isLoggedIn()) {
       this.loginbtn = false;
       this.logoutbtn = true;
-      console.log('estas login')
     }
     else {
       this.loginbtn = true;
       this.logoutbtn = false;
-      console.log('no estas login')
     }
   }
 
