@@ -8,7 +8,6 @@ import { GenresEntity } from 'src/app/interfaces/pelicula-detalles-interface';
 import { PeliculaCreditsInterface } from 'src/app/interfaces/pelicula-credits-interface';
 import { CastEntity } from 'src/app/interfaces/pelicula-credits-interface';
 import { CrewEntity } from 'src/app/interfaces/pelicula-credits-interface';
-
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -49,7 +48,7 @@ export class NgbdModalContent {
     './detalles-pelicula.component.scss'],
 })
 export class DetallesPeliculaComponent implements OnInit {
-
+  
   movieId : number;
   
   constructor(private modalService: NgbModal,

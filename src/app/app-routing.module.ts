@@ -6,13 +6,15 @@ import { DetallesPeliculaComponent } from './componentes/detalles-pelicula/detal
 import { BusquedaComponent } from './componentes/busqueda/busqueda.component';
 import { ProximosestrenosComponent } from './componentes/proximos-estrenos/proximosestrenos.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
+import { DonadoresComponent } from './componentes/donadores/donadores.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'detalles', component: DetallesPeliculaComponent },
   { path: 'busqueda', component: BusquedaComponent},
   { path: 'proximos-estrenos', component: ProximosestrenosComponent },
-  {path: 'registro', component:RegistroComponent }
+  {path: 'registro', component:RegistroComponent },
+  { path: 'Api-Donadores', component:DonadoresComponent }
 ];
 
 @NgModule({
