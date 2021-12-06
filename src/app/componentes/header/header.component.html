@@ -5,7 +5,12 @@
             <a class = "link" routerLink = "/proximos-estrenos">Próximos estrenos</a>
         </div>
         <div class = "header-right">
-            <a class = "link" routerLink = "/registro">Registrarse</a> &nbsp;  
+            <a class = "link"  *ngIf="loginbtn" routerLink = "/registro">Registrarse</a> &nbsp;  
+            <a class = "link" *ngIf="logoutbtn" routerLink = "/usuario-detalles">Usuario</a> &nbsp;
+            
+            <a class = "link" *ngIf="loginbtn" routerLink = "/login">Login</a> &nbsp;
+            
+            <a class = "link" *ngIf="logoutbtn" (click)="logout()">Desconectarse</a> &nbsp;
         </div>
     </nav>
 </div>

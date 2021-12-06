@@ -8,8 +8,11 @@ import { GenresEntity } from 'src/app/interfaces/pelicula-detalles-interface';
 import { PeliculaCreditsInterface } from 'src/app/interfaces/pelicula-credits-interface';
 import { CastEntity } from 'src/app/interfaces/pelicula-credits-interface';
 import { CrewEntity } from 'src/app/interfaces/pelicula-credits-interface';
+import { ListaFavoritaService } from 'src/app/servicios/lista-favorita-service.service';
 
 import { ActivatedRoute } from '@angular/router';
+import { Subscriber } from 'rxjs';
+import { LoginServiceService } from 'src/app/servicios/login-service.service';
 
 @Component({
   selector: 'ngbd-modal-content',
@@ -51,34 +54,31 @@ export class NgbdModalContent {
 export class DetallesPeliculaComponent implements OnInit {
 
   movieId : number;
+  userId: number = 1;
   
   constructor(private modalService: NgbModal,
     private route: ActivatedRoute,
     private peliculaDetalles: PeliculaDetailsServiceService,
-    private peliculaCredits: PeliculaCreditsServiceService) { 
+    private peliculaCredits: PeliculaCreditsServiceService,
+    private listaFavorita: ListaFavoritaService) { 
     //Agregar datos a getDetail()
     this.route.queryParams.subscribe(params => {
       this.movieId = params.movieId;
     });
     this.peliculaDetalles.getDetail(this.movieId).subscribe(
       data=>{
-        console.warn(<PeliculaDetallesInterface> data)
         this.pelicula = <PeliculaDetallesInterface> data;
 
-        console.warn(<GenresEntity[]> this.pelicula.genres)
         this.generos = <GenresEntity[]> this.pelicula.genres;
       }
     )
     
     this.peliculaCredits.getCredits(this.movieId).subscribe(
       data=>{
-        console.warn(<PeliculaCreditsInterface> data)
         this.creditos = <PeliculaCreditsInterface> data;
 
-        console.warn(<CastEntity[]> this.creditos.cast)
         this.reparto = <CastEntity[]> this.creditos.cast;
         
-        console.warn(<CrewEntity[]> this.creditos.crew)
         this.crew = <CrewEntity[]> this.creditos.crew;
       }
     )
@@ -97,11 +97,11 @@ export class DetallesPeliculaComponent implements OnInit {
   //director = this.crew.filter(d=>d.job==='Director');
 
   ngOnInit(): void {
-    
   }
 
+  
   agregarFavorito() {
-
+    this.listaFavorita.addMovieFav(this.movieId, this.userId).subscribe()
   }
 
   reproducirTrailer() {
